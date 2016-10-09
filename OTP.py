@@ -1,5 +1,6 @@
 from random import randint
 encrypt = open("encryption", "w")
+number_list = open("otp", "w")
 def length():
 	length = input("How many characters you like to be encrypted? ")
 	return length
@@ -8,18 +9,31 @@ def message():
 	return message
 def num_generator():
 	number = length()
-	rand_num = open("otp", "w")
+	global number_list
 	for x in range(number):
 		random = randint(0,24)
 		rand_num.write(random"\n"())
 		rand_num.close()
-def encrypting(count):
+def saving_message():
 	global encrypt
-	for count, number in enumerate(encrypt):
-		print(count, number)
+	encrypt.write(message())
+	encrypt.close()
+def reading_message():
+	global encrypt
+	encrypt.read()
+	person = input("Close file? Type Yes / No: ")
+		if person = "Yes":
+			encrypt.close()
+		elif person = "No":
+			break
+		else:
+			print("Invalid Response")
+def encrypting(start = 0):
+	global encrypt
+	global number_list
+	n = start
+	for a, number in enumerate(encrypt): 
+		number_list[n]
+		encrypt[n]
+		n + 1
 
-# def enter_message(): 
-#	global encrypt
-#	encrypt.write(message())
-#	encrypt.close()
-	
